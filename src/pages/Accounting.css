@@ -1,0 +1,50 @@
+.accounting {
+  display: grid;
+  gap: 1rem;
+}
+
+.accounting__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.accounting__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #d8e4e2;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 4px 12px rgba(14, 67, 81, 0.06);
+}
+
+.stat-card p {
+  margin: 0 0 0.3rem;
+  color: #4f6e73;
+  font-size: 0.86rem;
+}
+
+.stat-card strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1b4147;
+}
+
+.accounting .table-wrap table {
+  min-width: 380px;
+}
+
+@media (max-width: 480px) {
+  .accounting__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .accounting__form {
+    grid-template-columns: 1fr;
+  }
+}

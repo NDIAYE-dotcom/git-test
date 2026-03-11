@@ -1,0 +1,92 @@
+.staff {
+  display: grid;
+  gap: 1rem;
+}
+
+.staff .panel {
+  min-width: 0;
+}
+
+.staff__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.staff__checkbox {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.86rem;
+  color: #38565c;
+}
+
+.staff .table-wrap table {
+  min-width: 700px;
+}
+
+.staff .table-wrap button {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .staff .table-wrap {
+    overflow-x: visible;
+  }
+
+  .staff .table-wrap table,
+  .staff .table-wrap thead,
+  .staff .table-wrap tbody,
+  .staff .table-wrap tr,
+  .staff .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .staff .table-wrap thead {
+    display: none;
+  }
+
+  .staff .table-wrap table {
+    min-width: 0;
+  }
+
+  .staff .table-wrap tr {
+    background: #f8fbfb;
+    border: 1px solid #dce8e6;
+    border-radius: 10px;
+    padding: 0.5rem 0.65rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .staff .table-wrap td {
+    border-bottom: 1px dashed #d9e5e3;
+    padding: 0.42rem 0;
+  }
+
+  .staff .table-wrap td:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .staff .table-wrap td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.12rem;
+    color: #5a7579;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .staff .table-wrap button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff__form {
+    grid-template-columns: 1fr;
+  }
+}
