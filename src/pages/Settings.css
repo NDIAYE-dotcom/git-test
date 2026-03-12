@@ -1,0 +1,14 @@
+.settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.settings ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1rem;
+}
+
+.settings li {
+  margin-bottom: 0.35rem;
+}

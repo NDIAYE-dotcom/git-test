@@ -1,0 +1,110 @@
+.patients {
+  display: grid;
+  gap: 1rem;
+}
+
+.patients .panel {
+  min-width: 0;
+}
+
+.patients__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.patients__search {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.62rem;
+  border-bottom: 1px solid #e1ecea;
+}
+
+thead {
+  background: #f3f8f7;
+}
+
+.patients .table-wrap table {
+  min-width: 520px;
+}
+
+.patients .table-wrap button {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .patients .table-wrap {
+    overflow-x: visible;
+  }
+
+  .patients .table-wrap table,
+  .patients .table-wrap thead,
+  .patients .table-wrap tbody,
+  .patients .table-wrap tr,
+  .patients .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .patients .table-wrap thead {
+    display: none;
+  }
+
+  .patients .table-wrap table {
+    min-width: 0;
+  }
+
+  .patients .table-wrap tr {
+    background: #f8fbfb;
+    border: 1px solid #dce8e6;
+    border-radius: 10px;
+    padding: 0.5rem 0.65rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .patients .table-wrap td {
+    border-bottom: 1px dashed #d9e5e3;
+    padding: 0.42rem 0;
+  }
+
+  .patients .table-wrap td:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .patients .table-wrap td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.12rem;
+    color: #5a7579;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .patients .table-wrap button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .patients__form {
+    grid-template-columns: 1fr;
+  }
+}

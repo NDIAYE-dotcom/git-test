@@ -1,0 +1,100 @@
+.prescriptions {
+  display: grid;
+  gap: 1rem;
+}
+
+.prescriptions .panel {
+  min-width: 0;
+}
+
+.prescriptions__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6rem;
+}
+
+.prescriptions__actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.prescriptions__hint {
+  margin-top: 0;
+  color: #4f666c;
+  font-size: 0.83rem;
+}
+
+.prescriptions .table-wrap table {
+  min-width: 520px;
+}
+
+@media (max-width: 640px) {
+  .prescriptions .table-wrap {
+    overflow-x: visible;
+  }
+
+  .prescriptions .table-wrap table,
+  .prescriptions .table-wrap thead,
+  .prescriptions .table-wrap tbody,
+  .prescriptions .table-wrap tr,
+  .prescriptions .table-wrap td {
+    display: block;
+    width: 100%;
+  }
+
+  .prescriptions .table-wrap thead {
+    display: none;
+  }
+
+  .prescriptions .table-wrap table {
+    min-width: 0;
+  }
+
+  .prescriptions .table-wrap tr {
+    background: #f8fbfb;
+    border: 1px solid #dce8e6;
+    border-radius: 10px;
+    padding: 0.5rem 0.65rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .prescriptions .table-wrap td {
+    border-bottom: 1px dashed #d9e5e3;
+    padding: 0.42rem 0;
+  }
+
+  .prescriptions .table-wrap td:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .prescriptions .table-wrap td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.12rem;
+    color: #5a7579;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .prescriptions .table-wrap .btn-pdf-row {
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescriptions__form {
+    grid-template-columns: 1fr;
+  }
+
+  .prescriptions__actions {
+    flex-direction: column;
+  }
+
+  .prescriptions__actions button {
+    width: 100%;
+  }
+}
