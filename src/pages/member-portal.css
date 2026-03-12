@@ -1,0 +1,158 @@
+.member-portal {
+  display: grid;
+  gap: 24px;
+  color: var(--text-secondary);
+}
+
+.portal-hero,
+.member-access-card,
+.member-profile-card,
+.notification-panel {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-strong);
+}
+
+.portal-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  padding: 32px;
+}
+
+.portal-tag {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  color: var(--text-soft);
+}
+
+.portal-hero h2,
+.member-profile-card h3,
+.notification-panel h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.member-access-card,
+.notification-panel {
+  padding: 28px;
+}
+
+.access-form,
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.access-form label,
+.profile-grid label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.access-form input,
+.profile-grid input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(18, 35, 33, 0.12);
+  border-radius: 16px;
+  background: #fcfaf7;
+}
+
+.profile-grid input:read-only {
+  background: #f0ede6;
+  color: var(--text-soft);
+}
+
+.access-form button,
+.profile-header button {
+  min-height: 50px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), #ffd35e);
+  color: #fff9f3;
+}
+
+.member-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.member-profile-card {
+  padding: 24px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+.notification-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.notification-list article {
+  padding: 18px;
+  border-radius: 22px;
+  background: #f5ede0;
+}
+
+.notification-list p {
+  margin: 10px 0;
+}
+
+.notification-list span,
+.portal-error,
+.portal-success {
+  font-weight: 600;
+}
+
+.portal-error {
+  color: var(--danger);
+  margin-top: 14px;
+}
+
+.portal-success {
+  color: var(--success);
+  margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+  .portal-hero,
+  .member-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .portal-hero,
+  .member-access-card,
+  .member-profile-card,
+  .notification-panel {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .access-form,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,70 @@
+:root {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top, rgba(244, 172, 12, 0.16), transparent 24%),
+    linear-gradient(180deg, #f3ede3 0%, #f7f2ea 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --surface-dark: #0d2321;
+  --surface-mid: #173632;
+  --surface-light: rgba(255, 255, 255, 0.82);
+  --card-border: rgba(10, 43, 39, 0.08);
+  --text-primary: #f7fbfa;
+  --text-secondary: #122321;
+  --text-muted: #a8c3bc;
+  --text-soft: #59716c;
+  --accent: #f4ac0c;
+  --accent-strong: #c78900;
+  --accent-soft: rgba(244, 172, 12, 0.16);
+  --success: #26a17b;
+  --success-soft: rgba(38, 161, 123, 0.14);
+  --danger: #c34d4d;
+  --danger-soft: rgba(195, 77, 77, 0.14);
+  --warning: #f4c35b;
+  --shadow-strong: 0 24px 60px rgba(8, 18, 21, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
